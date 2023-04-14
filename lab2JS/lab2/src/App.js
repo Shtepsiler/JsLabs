@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import "./index.css";
 
 class App extends React.Component {
     render() {
@@ -29,39 +29,40 @@ class App extends React.Component {
 class Task1 extends React.Component {
     render() {
         return (
-            <div>text</div>);
+            <div>tex1</div>);
     }
 }
 
 
 class Task2 extends React.Component {
     render() {
-        let text = "text";
+        let text = "text task2";
 
         return (
-            <div><p>text</p></div>);
+            <div><p>{text}</p></div>);
     }
 }
 
 class Task3 extends React.Component {
     render() {
-        let text = "<p>text</p>";
-
+        var text = <p>text3</p>;
         return (
-            <div><p>text</p></div>);
+            <div>{text}</div>);
     }
+
+
 }
 
 class Task4 extends React.Component {
     render() {
-        let text1 = "<p>text1</p>";
-        let text2 = "<p>text2</p>";
+        let text1 = "<p>Task 4 text1</p>";
+        let text2 = "<p>Task 4 text2</p>";
 
         return (
-            <div>
-                <p>text1</p>
+            <div >
+                {text1}
                 <p>!!!</p>
-                <p>text2</p>
+                {text2}
             </div>
 );
     }
@@ -71,8 +72,8 @@ class Task5 extends React.Component {
     render() {
         let attr = "block";
         return (
-            <div id="attr">
-                Text
+            <div id={attr}>
+                Text5
             </div>
 );
     }
@@ -82,8 +83,8 @@ class Task6 extends React.Component {
         let str = "block";
 
         return (
-            <div class='str'>
-                text
+            <div class={str}>
+                text6
             </div>
 );
     }
@@ -92,25 +93,23 @@ class Task6 extends React.Component {
 
 class Task7 extends React.Component {
     render() {
-        let text = "<p>text</p>";
-
         return (
-            <div><p>text</p></div>);
+            <div class="myclass"><p>text7</p></div>);
     }
 }
 
 class Task8 extends React.Component {
     render() {
-        let show = true;
- if (show == true) {
+         var show = true;
+ if (show === true) {
         return (
            
-            <div><p>true text</p></div>
+            <div><p>true text8</p></div>
           );}
  else {
      return (
 
-         <div><p>false text</p></div>
+         <div><p>false text8</p></div>
      );
         }
         
@@ -121,34 +120,42 @@ class Task8 extends React.Component {
 
 class Task9 extends React.Component {
     render() {
-        let text = "text";
+        let arr = ['a', 'b', 'c', 'd', 'e'];
 
         return (
-            <ul>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-                <li>d</li>
-                <li>e</li>
-            </ul>
+<div>
+
+        {arr.map((item) => (
+            <li>{item}</li>
+        ))}
+
+</div>
         );
     }
 }
 class Task10 extends React.Component {
     render() {
-        let text = "text";
-
         return (
-            <div><p>text</p></div>);
+            <div>{this.getText()}</div>);
+    }
+
+    getText(){
+        return <p>text task3</p>
     }
 }
 class Task11 extends React.Component {
     render() {
-        let text = "<p>text</p>";
+        let text = <b>text11</b>;
 
         return (
-            <div><p>text</p></div>);
+            <div>{text} {this.getNum1()+this.getNum2()}</div>);
     }
+
+    getNum1(){return 1;}
+    getNum2(){return 2;}
+
+
+
 }
 
 
