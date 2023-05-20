@@ -1,0 +1,8 @@
+<p>task8 works!</p>
+<ul>
+    <li *ngFor="let country of keys(countries)">
+      {{ country }}:
+      <span *ngFor="let city of countries[country]">{{ city }}</span>
+    </li>
+  </ul>
+  
